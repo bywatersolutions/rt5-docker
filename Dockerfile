@@ -36,7 +36,17 @@ RUN ./configure \
 
 COPY files/root/.cpan/CPAN/MyConfig.pm /root/.cpan/CPAN/MyConfig.pm
 RUN cpan -f GnuPG::Interface PerlIO::eol
-RUN cpanm HTML::Element Plack::Handler::Starman
+RUN PERL5LIB=/opt/rt/lib cpanm \
+    HTML::Element \
+    Plack::Handler::Starman \
+    RT::Extension::GroupSummary \
+    RT::Extension::Memo \
+    RT::Extension::QuickUpdate \
+    RT::Extension::ResetPassword \
+    RT::Extension::RightsInspector \
+    RT::Extension::Slack \
+    RT::Extension::Tags \
+    RTx::Calendar
 
 RUN yes n | make fixdeps
 
