@@ -1,7 +1,7 @@
 # Request Tracker 5 Docker
 
 ## Usage
-docker run  bywatersolutions/rt5:latest
+docker run  bywatersolutions/rt5-docker:latest
 ```bash
 docker run -d  \
     --name rt5 \
