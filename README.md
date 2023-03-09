@@ -8,5 +8,5 @@ docker run -d  \
     -v /opt/rt5/etc/RT_SiteConfig.d/:/opt/rt/etc/RT_SiteConfig.d/ \
     -p 8001:8000 \
     --network my_nw \
-    quay.io/bywatersolutions/rt5:latest
+    quay.io/bywatersolutions/rt5-docker:latest
 ```
